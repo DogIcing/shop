@@ -28,12 +28,58 @@ body {
      <td>
       <img src="https://dogicing.github.io/shop/assets/images/items/17654C56-2962-4B98-8BC2-5A0CDA0731A6.png" style="width:70%" alt="404">
      </td>
+     <td>
+      <h2 id="price"></h2>
+     </td>
     </tr>
     <tr>
      <td>
       <img src="https://dogicing.github.io/shop/assets/images/items/63749292-29D0-4687-A594-971B0E9769A4.png" style="width:70%" alt="404">
      </td>
+     <td>
+      <p>Get a portfolio on Hopnet with your projects.</p>
+      <h3>Thumbnail</h3>
+      <p>With HS's API, we'll get the thumbnail of the project and add it on with <b>Custom Images</b>.</p>
+      <hr>
+      <h3>Your logo</h3>
+      <p>We'll happily add your logo at the bottom of the page, otherwise we can draw your username (default).</p>
+      <hr>
+      <h3>Linking</h3>
+      <p>Your project will to Hopnet, meaning that when someone clicks the thumbnail, it'll open the project with the 
+       new <b>Open Project</b> block.</p>
+      <hr>
+      <h3>options</h3>
+      <br>
+      <select id="ProjectAmount">
+       <option value="3">Three Projects</option>
+       <option value="5">Five projects</option>
+       <option value="8">Eight Projects</option>
+       <option value="10" selected>Ten Projects</option>
+      </select>
+      
+      <button onclick="getpriceprojectamount()">Update</button>
+      
+      <script>
+       function getpriceprojectamount(){
+        var projectAmount = document.getElementById("ProjectAmount").value;
+        if (projectAmount == 3) {
+         var price = "1.25 Balloons for 3";
+        }
+        else if (projectAmount == 5) {
+         var price = "1.75 Balloons for 5";
+        }
+        else if (projectAmount == 8) {
+         var price = "2.30 Balloons for 8";
+        }
+        else if (projectAmount == 10) {
+         var price = "2.75 Balloons for 10";
+        }
+        document.getElementById("price").innerHTML = price;
+       }
+      </script>
+     </td>
     </tr>
+
     <tr>
      <td>
       <img src="https://dogicing.github.io/shop/assets/images/items/9B770C67-6E4D-45B3-8281-82FA81A200B6.png" style="width:70%" alt="404">  
